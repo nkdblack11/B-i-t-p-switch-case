@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch-case</title>
+    <script>
+        function tinh_ngay() {
+            let day = document.getElementById('nhap').value;
+            let a = parseInt(day);
+            switch (a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById('ketqua').innerHTML = "Tháng có 31 ngày"
+                    break
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById('ketqua').innerHTML = "Tháng có 30 ngày"
+                    break
+                case 2:
+                    document.getElementById('ketqua').innerHTML = "Tháng có 28 hoặc 29 ngày"
+                    break
+
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <table>
+        <input type="text" name="nhap" id="nhap"/>
+        <button type="button" value="tinh" onclick="tinh_ngay()">Tính số
+            ngày
+        </button>
+        <div id="ketqua"></div>
+    </table>
+</form>
+</body>
+</html>
